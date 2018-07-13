@@ -10,6 +10,7 @@ License:	GPLv2+ or Artistic
 Url:		http://search.cpan.org/dist/%{modname}/
 Source0:	http://search.cpan.org/CPAN/authors/id/L/LE/LEONT/File-Slurper-%{modver}.tar.gz
 BuildArch:	noarch
+BuildRequires:	perl(Test::More)
 BuildRequires:	perl-devel
 Suggests:	perl(PerlIO::utf8_strict)
 
