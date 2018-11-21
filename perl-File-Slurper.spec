@@ -11,6 +11,7 @@ Url:		http://search.cpan.org/dist/%{modname}/
 Source0:	http://search.cpan.org/CPAN/authors/id/L/LE/LEONT/File-Slurper-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Test::More)
+BuildRequires:	perl(Test::Warnings)
 BuildRequires:	perl-devel
 Suggests:	perl(PerlIO::utf8_strict)
 
@@ -18,17 +19,17 @@ Suggests:	perl(PerlIO::utf8_strict)
 Simple perl module to slurp a file
 
 %prep
-%setup -qn %{modname}-%{modver}
+%autosetup -n %{modname}-%{modver} -p1
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
-%make
+%__perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}"
+%make_build
 
 %check
 make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc README Changes
