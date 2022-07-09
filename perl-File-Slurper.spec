@@ -1,10 +1,10 @@
 %define	modname	File-Slurper
-%define	modver	0.012
+%define	modver	0.013
 
 Summary:	Simple perl module to slurp a file
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	3
+Release:	1
 Group:		Development/Perl
 License:	GPLv2+ or Artistic
 Url:		http://metacpan.org/pod/File::Slurper
