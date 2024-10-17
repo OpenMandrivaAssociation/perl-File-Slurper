@@ -7,7 +7,7 @@ Version:	%perl_convert_version %{modver}
 Release:	2
 Group:		Development/Perl
 License:	GPLv2+ or Artistic
-Url:		http://metacpan.org/pod/File::Slurper
+Url:		https://metacpan.org/pod/File::Slurper
 Source0:	http://search.cpan.org/CPAN/authors/id/L/LE/LEONT/File-Slurper-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Test::More)
