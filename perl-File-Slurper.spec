@@ -4,7 +4,7 @@
 Summary:	Simple perl module to slurp a file
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	2
+Release:	3
 Group:		Development/Perl
 License:	GPLv2+ or Artistic
 Url:		https://metacpan.org/pod/File::Slurper
