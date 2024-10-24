@@ -1,14 +1,13 @@
 %define	modname	File-Slurper
-%define	modver	0.013
 
 Summary:	Simple perl module to slurp a file
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	3
+Version:	0.014
+Release:	1
 Group:		Development/Perl
 License:	GPLv2+ or Artistic
 Url:		https://metacpan.org/pod/File::Slurper
-Source0:	http://search.cpan.org/CPAN/authors/id/L/LE/LEONT/File-Slurper-%{modver}.tar.gz
+Source0:	http://search.cpan.org/CPAN/authors/id/L/LE/LEONT/File-Slurper-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl(Test::Warnings)
@@ -19,10 +18,10 @@ Suggests:	perl(PerlIO::utf8_strict)
 Simple perl module to slurp a file
 
 %prep
-%autosetup -n %{modname}-%{modver} -p1
+%autosetup -n %{modname}-%{version} -p1
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}"
+perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}"
 %make_build
 
 %check
